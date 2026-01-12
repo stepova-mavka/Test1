@@ -5,3 +5,5 @@ while ghoul > 0:
     print(ghoul, "- 7 = ", ghoul - 7)
     ghoul -= 7
 
+
+print("that's it lol")
