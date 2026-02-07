@@ -12,7 +12,7 @@ raw_numbers = [
     "38050 111 22 11   ",
 ]
 
-def normalize_phone_number(phone_number):
+def normalize_phone(phone_number):
     phone_number = re.sub(r"[^\d]", "", phone_number)  # Remove non-digit characters
     if len(phone_number) == 10:
         return f"+38{phone_number}" # add country code where missing
@@ -21,6 +21,6 @@ def normalize_phone_number(phone_number):
     else:
         return "Invalid phone number"
     
-sanitized_numbers = [normalize_phone_number(number) for number in raw_numbers] 
+sanitized_numbers = [normalize_phone(number) for number in raw_numbers] 
 
 print(f"Нормалізовані номери телефонів для SMS розсилки: {sanitized_numbers}")
